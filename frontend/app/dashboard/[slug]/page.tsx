@@ -149,7 +149,6 @@ export default function Page({ params }: Props) {
         getFilteredRowModel: getFilteredRowModel(),
         onColumnVisibilityChange: setColumnVisibility,
         onRowSelectionChange: (updater) => {
-            // If it's a function updater
             if (typeof updater === 'function') {
                 setRowSelection((prev) => {
                     const next = updater(prev)
@@ -161,7 +160,6 @@ export default function Page({ params }: Props) {
                     return prev
                 })
             } else {
-                // If it's a direct value update
                 const selectedCount = Object.keys(updater).length
                 if (selectedCount <= 2) {
                     setRowSelection(updater)

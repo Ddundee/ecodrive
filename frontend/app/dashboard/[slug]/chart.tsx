@@ -10,7 +10,6 @@ type Props = {
 }
 
 export default function Chart({ chartData }: Props) {
-    // Transform the data to have MPG types as categories
     const transformedData = [
         {
             category: "City MPG",
@@ -29,15 +28,14 @@ export default function Chart({ chartData }: Props) {
         },
     ];
 
-    // Dynamic chart config based on selected cars
     const chartConfig = {
         [chartData[0]?.model]: {
             label: chartData[0]?.model,
-            color: "#2563eb", // Dark blue
+            color: "#2563eb",
         },
         [chartData[1]?.model]: {
             label: chartData[1]?.model,
-            color: "#60a5fa", // Light blue
+            color: "#60a5fa",
         },
     } satisfies ChartConfig;
 

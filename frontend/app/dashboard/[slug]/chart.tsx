@@ -32,11 +32,11 @@ export default function Chart({ chartData }: Props) {
     const chartConfig = {
         [sortedData[0]?.model]: {
             label: sortedData[0]?.model,
-            color: "#2563eb",
+            color: "#cf364c",
         },
         [sortedData[1]?.model]: {
             label: sortedData[1]?.model,
-            color: "#60a5fa",
+            color: "#592133",
         },
     } satisfies ChartConfig;
 
